@@ -20,11 +20,11 @@ const app = express();
 // ── Middleware ──────────────────────────────────────────────────────────────
 app.use(
   cors({
-    origin: [
-      "http://localhost:5173",
-      "http://localhost:3000",
-      "https://your-netlify-app.netlify.app"
-    ],
+    origin: function (origin, callback) {
+      // Allow requests with no origin (mobile apps, curl, etc.)
+      // and all browser origins
+      callback(null, true);
+    },
     credentials: true,
   })
 );
