@@ -18,26 +18,16 @@ connectDB();
 const app = express();
 
 // ── Middleware ──────────────────────────────────────────────────────────────
-const allowedOrigins = [
-  "http://localhost:5173",
-  "http://localhost:3000",
-  "https://your-netlify-url.netlify.app"
-];
-
 app.use(
   cors({
-    origin: function (origin, callback) {
-      if (!origin || allowedOrigins.includes(origin)) {
-        callback(null, true);
-      } else {
-        callback(new Error("Not allowed by CORS"));
-      }
-    },
-    methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+    origin: [
+      "http://localhost:5173",
+      "http://localhost:3000",
+      "https://your-netlify-app.netlify.app"
+    ],
     credentials: true,
   })
 );
-app.options("*", cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(morgan('dev')); // HTTP request logger
