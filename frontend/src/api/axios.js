@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: '/api',
+  baseURL: 'https://military-asset-management-t0rb.onrender.com/api',
   headers: { 'Content-Type': 'application/json' },
 });
 
