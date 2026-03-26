@@ -71,7 +71,7 @@ MONGODB_URI=mongodb://localhost:27017/military_assets
 JWT_SECRET=your_secret_key
 
 ## Project is Deployed
-Frontend Live URL:
+Frontend Live URL:https://militaryasset-management.netlify.app/login
 Backend Live URL:https://military-asset-management-t0rb.onrender.com
 
 Run seed script:
