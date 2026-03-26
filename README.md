@@ -72,7 +72,7 @@ JWT_SECRET=your_secret_key
 
 ## Project is Deployed
 Frontend Live URL:
-Backend Live URL:
+Backend Live URL:https://military-asset-management-t0rb.onrender.com
 
 Run seed script:
 
